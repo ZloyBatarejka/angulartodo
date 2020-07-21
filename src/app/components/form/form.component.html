@@ -1,0 +1,12 @@
+<div>
+  <form [formGroup]="form" (ngSubmit)="addPost()">
+    <input type="text" formControlName="title">
+    <button class="btn"  type="submit" [disabled]="form.invalid || form.pending">Добавить</button>
+  </form>
+  <div
+  *ngIf="form.get('title').invalid && form.get('title').touched"
+  class="validation"
+  >
+  Минимальное колиство символов: {{form.get('title').errors.minlength.requiredLength}}
+</div>
+</div>

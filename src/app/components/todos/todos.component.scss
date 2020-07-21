@@ -1,0 +1,16 @@
+app-form {
+  display: block;
+  width: 100%;
+}
+ul {
+  list-style: none;
+}
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid rgba(53, 121, 46, 0.8);
+  border-radius: 10px;
+}

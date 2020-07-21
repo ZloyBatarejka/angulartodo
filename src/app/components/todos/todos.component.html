@@ -1,0 +1,15 @@
+<div>
+  <app-form></app-form>
+  <ul *ngFor="let todo of todosService.posts">
+    <li>
+    <div class="info">
+      <h2 [class.completed]="todo.complted">{{todo.title}}</h2>
+      <p>{{todo.date | date:'d.MM ,HH:mm:ss'}}</p>
+    </div>
+    <div class="buttons">
+      <button class="btn" (click)="deletePost(todo.id)">Удалить</button>
+      <button class="btn" [disabled]="todo.complted" (click)="completePost(todo.id)">Завершить</button>
+    </div>
+    </li>
+  </ul>
+</div>

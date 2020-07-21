@@ -1,0 +1,25 @@
+form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+}
+input {
+  width: 80%;
+  padding: 0.5rem;
+  margin: 10px;
+  border: none;
+  border-bottom: 1px solid rgb(124, 124, 124);
+  &.ng-invalid.ng-touched {
+    border-bottom: 1px solid red;
+  }
+
+  &.ng-valid.ng-touched {
+    border-bottom: 1px solid green;
+  }
+}
+
+.validation {
+  color: red;
+  padding: 0.5rem;
+}
